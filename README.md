@@ -53,12 +53,16 @@ The model was trained over **30-50 epochs** with Early Stopping.
 Building this project involved overcoming several significant technical hurdles. Here is how they were solved:
 
 ### 1: Overfitting (High Variance)
-* **The Issue:** The model initially achieved ~99% training accuracy but only ~75% validation accuracy. The Loss graph showed a distinct "U-turn," indicating the model was memorizing the training data instead of learning features.
+* **The Issue:** The model initially achieved ~99% training accuracy but only ~75% validation accuracy. The Loss graph showed a distinct "U-turn," indicating the model was memorizing the training data instead of learning features, and confidence level was 45%.
 * **The Diagnosis:** The model was too complex for the dataset size, and lacked regularization.
+* ![WhatsApp Image 2025-11-23 at 7 36 19 PM](https://github.com/user-attachments/assets/c3445d1b-f2c2-4c21-b92e-dac4cea42068)
+
 
 ### 2: Underfitting (High Bias)
-* **The Attempt:** We introduced heavy `Dropout(0.5)` layers and reduced the number of filters significantly.
+* **The Attempt:** We introduced heavy `Dropout(0.5)` layers and reduced the number of filters significantly, condifence level was 12%
 * **The Result:** Both training and validation accuracy stalled at around 60%. The model became "too dumb" to learn the complex curves of Kannada digits.
+* ![WhatsApp Image 2025-11-23 at 7 38 34 PM](https://github.com/user-attachments/assets/a015f24c-3a55-4d3f-a6b5-a382533d4cc8)
+
 
 ### 3: The "Goldilocks" Balance (Final Model)
 * **The Solution:** 1. Tuned Dropout rates to **0.2** (gentle regularization).
