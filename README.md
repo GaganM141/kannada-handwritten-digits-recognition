@@ -91,5 +91,10 @@ The dataset consists of real-world images of Kannada digits collected manually.
 **[https://www.kaggle.com/datasets/hsbharath/kannada-handwritten-digit-dataset]**
 
 
+## Contributors
+* **Gagan.M**
+* **Bharath.H.S**
+
+
 
 
